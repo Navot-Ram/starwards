@@ -45,4 +45,13 @@ export abstract class SpaceObjectBase extends Schema {
         this.position = position;
         return this;
     }
+    setValue(origin: SpaceObjectBase) {
+        this.id = origin.id;
+        this.position.setValue(origin.position);
+        this.radius = origin.radius;
+        this.velocity.setValue(origin.velocity);
+        this.angle = origin.angle;
+        this.turnSpeed = origin.turnSpeed;
+        this.health = origin.health;
+    }
 }

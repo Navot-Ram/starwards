@@ -106,6 +106,15 @@ function launchJson(moduleNames) {
                         internalConsoleOptions: 'openOnSessionStart',
                     },
                     {
+                        name: 'run simulations',
+                        type: 'node',
+                        request: 'launch',
+                        // preLaunchTask: 'build:model',
+                        cwd: '${workspaceFolder}',
+                        args: ['-r', '@ts-tools/node/r', '${workspaceFolder}/modules/simulations/src/main.ts'],
+                        internalConsoleOptions: 'openOnSessionStart',
+                    },
+                    {
                         // from https://github.com/angular/angular-cli/issues/2453#issuecomment-269055938
                         name: 'debug chrome',
                         type: 'chrome',
