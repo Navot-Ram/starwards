@@ -10,7 +10,7 @@
         "clean": "rimraf ./cjs",
         "prebuild": "yarn clean",
         "build": "ts-build ./src --cjs",
-        "test": "echo \"No tests\"",
+        "test": "mocha -r @ts-tools/node/r test/**/*.spec.ts --watch-extensions ts --colors",
         "prepack": "yarn build",
         "start": "nodemon -r @ts-tools/node/r ./src/main.ts"
     },
