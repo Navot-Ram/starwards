@@ -4,5 +4,11 @@
     "files.eol": "\n",
     "typescript.enablePromptUseWorkspaceTsdk": true,
     "typescript.tsdk": "node_modules\\typescript\\lib",
-    "circleci-vscode.apiToken": "ae146f2ddd21472c9177b05fd9df6437a6b7128d"
+    "circleci-vscode.apiToken": "ae146f2ddd21472c9177b05fd9df6437a6b7128d",
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/db4e3ea0-27cb-419b-81d9-da2df66b4a8b/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/staging-starwards",
+    "appService.deploySubpath": "dist"
 }
